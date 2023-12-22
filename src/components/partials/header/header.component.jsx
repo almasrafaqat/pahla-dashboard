@@ -53,7 +53,7 @@ const HeaderPrimary = () => {
 
           <div class="user-box">
             <div className='d-flex align-items-center img-profile--container' onClick={dropdownProfile}>
-              <img src='./img/fox.jpg' className='user-img' width={40} height={40} />
+              <img src='./img/fox.jpg' className='user-img' width={40} height={40} alt="dropdown-pic" />
 
               <div className="user-info ps-3">
                 <p class="user-name mb-0">Pauline Seitz</p>
