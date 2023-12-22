@@ -1,14 +1,12 @@
 import React, { Fragment } from 'react'
 import { SidebarItems } from '../../../data';
 import ItemsCard from '../../sidebar-item-card/item-card.components';
-import { useGlobalState } from '../../../context/GlobalStates';
 import './sidebar.style.css';
 
 
 
 const SidebarNav = () => {
 
-  
 
   return (
     <Fragment>
