@@ -1,0 +1,297 @@
+.sidebar-wrapper {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  border-right: 0 solid #e4e4e4;
+  z-index: 99;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.12) !important;
+  transition: all 0.2s ease-out;
+  overflow-y: auto;
+	&::-webkit-scrollbar {
+		width: 0px;
+	}
+}
+
+
+.sidebar-header {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 0 15px;
+  z-index: 5;
+  background: #fff;
+  background-clip: padding-box;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.logo-icon {
+  width: 60px;
+}
+.logo-text {
+  font-size: 22px;
+  margin-left: 50px;
+  margin-bottom: 0;
+  letter-spacing: 4px;
+  color: #0d6efd;
+}
+.toggle-icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: #0d6efd;
+}
+.sidebar-wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: 0 0;
+}
+.sidebar-wrapper .metismenu {
+  background: 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  margin-top: 60px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.sidebar-wrapper .metismenu li + li {
+  margin-top: 5px;
+}
+.sidebar-wrapper .metismenu li:first-child {
+  margin-top: 5px;
+}
+.sidebar-wrapper .metismenu li:last-child {
+  margin-bottom: 5px;
+}
+.sidebar-wrapper .metismenu > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+}
+.sidebar-wrapper .metismenu a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 8px 15px;
+  font-size: 15px;
+  color: #5f5f5f;
+  outline-width: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  border: 1px solid #ffffff00;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.sidebar-wrapper .metismenu a .parent-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+.sidebar-wrapper .metismenu a .menu-title {
+  margin-left: 10px;
+}
+.sidebar-wrapper .metismenu ul a {
+  padding: 6px 15px 6px 15px;
+  font-size: 15px;
+  border: 0;
+}
+.sidebar-wrapper .metismenu ul a span {
+  margin-right: 10px;
+}
+
+.sidebar-wrapper .metismenu ul {
+  /* border: 1px solid #ededed; */
+  background: #fff;
+}
+.sidebar-wrapper .metismenu ul ul a {
+  padding: 8px 15px 8px 30px;
+}
+.sidebar-wrapper .metismenu ul ul ul a {
+  padding: 8px 15px 8px 45px;
+}
+.sidebar-wrapper .metismenu .mm-active > a,
+.sidebar-wrapper .metismenu a:active,
+.sidebar-wrapper .metismenu a:focus,
+.sidebar-wrapper .metismenu a:hover {
+  color: #0d6efd;
+  text-decoration: none;
+  background: rgb(13 110 253 / 0.12);
+}
+.menu-label {
+  padding: 20px 15px 5px 5px;
+  color: #b0afaf;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.metismenu .has-arrow:after {
+  position: absolute;
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  border-style: solid;
+  border-width: 1.2px 0 0 1.2px;
+  border-color: initial;
+  right: 15px;
+  transform: rotate(-45deg) translateY(-50%);
+
+  transform-origin: top;
+  top: 50%;
+  transition: all 0.3s ease-out;
+}
+.metismenu .has-arrow.arrow-down:after {
+  transform: rotate(-135deg) translateY(-50%);
+}
+
+/**Media Query */
+@media screen and (min-width: 1025px) {
+
+  .wrapper.toggled:not(.sidebar-hovered)
+    .sidebar-wrapper
+    .sidebar-header
+    .logo-text {
+    display: none;
+  }
+  .wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper {
+    width: 70px;
+  }
+  .wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .sidebar-header {
+    width: 70px;
+  }
+  .wrapper.toggled:not(.sidebar-hovered)
+    .sidebar-wrapper
+    .sidebar-header
+    .toggle-icon {
+    display: none;
+  }
+  .wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .sidebar-header {
+    justify-content: center;
+  }
+  .wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .sidebar-header {
+    width: 70px;
+  }
+  .wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .metismenu a {
+    justify-content: center;
+  }
+  .wrapper.toggled:not(.sidebar-hovered)
+    .sidebar-wrapper
+    .metismenu
+    .menu-title {
+    display: none;
+  }
+  .wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .metismenu li ul {
+    display: none;
+  }
+  .wrapper.toggled:not(.sidebar-hovered)
+    .sidebar-wrapper
+    .metismenu
+    li.menu-label {
+    display: none;
+  }
+  .wrapper.toggled:not(.sidebar-hovered)
+    .sidebar-wrapper
+    .metismenu
+    .has-arrow:after {
+    display: none;
+  }
+  .email-toggle-btn {
+    display: none !important;
+  }
+  .chat-toggle-btn {
+    display: none !important;
+  }
+}
+@media screen and (max-width:1024px) {
+
+  .topbar {
+		left: 0!important
+	}
+	.mobile-search-icon {
+		display: block
+	}
+	.mobile-toggle-menu {
+		display: block
+	}
+	.sidebar-wrapper {
+		left: -300px;
+		box-shadow: none
+	}
+	.page-wrapper {
+		margin-left: 0
+	}
+	.page-footer {
+		left: 0
+	}
+	.search-bar {
+		display: none
+	}
+	.full-search-bar {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		z-index: 100;
+		background: #171717;
+		height: 60px;
+		padding: 0 1.4rem
+	}
+	.search-bar-box {
+		width: 100%
+	}
+	.search-close {
+		display: block
+	}
+	.search-show {
+		left: 15px;
+		right: auto
+	}
+	.search-control {
+		background-color: #fff;
+		border: 1px solid #f2efef00;
+		padding-left: 2.5rem
+	}
+	.search-control-2 {
+		color: #fff;
+		background-color: #212529;
+		border: 1px solid rgb(255 255 255 / 12%)!important;
+		padding-left: 2.5rem
+	}
+	.wrapper.toggled .sidebar-wrapper {
+		left: 0
+	}
+	.wrapper.toggled .page-wrapper {
+		margin-left: 0
+	}
+	.wrapper.toggled .overlay {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #000;
+		opacity: .6;
+		z-index: 90;
+		display: block;
+		cursor: move;
+		transition: all .2s ease-out
+	}
+}
+
